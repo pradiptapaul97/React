@@ -1,0 +1,20 @@
+.slick-dots li.slick-active button:before {
+    opacity: 1 !important;
+    color: #f53f85 !important;
+    font-size: 20px !important;
+}
+
+.slick-dots li button:before {
+    opacity: 1 !important;
+    color:#f53f85 !important;
+    font-size: 10px !important;
+}
+
+.foot .slick-slide {
+    width: 210px !important;
+    text-decoration: none;
+}
+
+.foot .slick-slide div:focus {
+    outline: none !important;
+}

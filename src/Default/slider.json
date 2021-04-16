@@ -1,0 +1,58 @@
+{
+    "homes":[
+        {
+            "name":"pic1",
+            "image": "slier/slider1.jpg"
+        },
+        {
+            "name":"pic2",
+            "image": "slier/slider2.jpg"
+        },
+        {
+            "name":"pic3",
+            "image": "slier/slider3.jpg"
+        }
+    ],
+    "catagory":[
+        {
+            "name":"pic1",
+            "image": "../../slier/men.jpg"
+        },
+        {
+            "name":"pic2",
+            "image": "../../slier/women.jpg"
+        },
+        {
+            "name":"pic3",
+            "image": "../../slier/electro.jpg"
+        },
+        {
+            "name":"pic3",
+            "image": "../../slier/jualary.jpg"
+        }
+    ],
+    "contact":[
+        {
+            "name":"contact1",
+            "image":"slier/contact1.jpeg"
+        }
+    ],
+    "about":[
+        {
+            "name":"about1",
+            "image":"slier/about1.jpg"
+        }
+    ],
+    "faq":[
+        {
+            "name":"faq",
+            "image":"slier/faq.jpg"
+        }
+    ],
+    "customer":[
+        {
+            "name":"customer",
+            "image":"slier/customer.jpg"
+        }
+    ]
+}

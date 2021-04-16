@@ -1,0 +1,100 @@
+{
+    "products":[
+        {
+            "id":"0",
+            "name":"Laptop",
+            "description":"Good Product 0",
+            "image": "img/laptop.jpg",
+            "subproduct":[
+                {
+                    "id":"00",
+                    "name":"HP",
+                    "image": "img/hp.jpg",
+                    "rating": "4",
+                    "price": "55000",
+                    "subdescription":"HP Good"
+                },
+                {
+                    "id":"01",
+                    "name":"DELL",
+                    "image": "img/dell.jpg",
+                    "rating": "4.5",
+                    "price": "54000",
+                    "subdescription":"DEll Good"
+                }
+            ]
+        },
+        {
+            "id":"1",
+            "name":"Headphone",
+            "description":"Good Product 1",
+            "image": "img/headphone.jpg",
+            "subproduct":[
+                {
+                    "id":"10",
+                    "name":"BOAT",
+                    "image": "img/boat.jpg",
+                    "rating": "3.5",
+                    "price": "500",
+                    "subdescription":"Boat Good"
+                },
+                {
+                    "id":"11",
+                    "name":"JBL",
+                    "image": "img/jbl.jpg",
+                    "rating": "4",
+                    "price": "550",
+                    "subdescription":"jbl Good"
+                }
+            ]
+        },
+        {
+            "id":"2",
+            "name":"Keyboard",
+            "description":"Good Product 2",
+            "image": "img/keyboard.jpg",
+            "subproduct":[
+                {
+                    "id":"20",
+                    "name":"FRONTECH",
+                    "image": "img/fk.jpg",
+                    "rating": "4.5",
+                    "price": "250",
+                    "subdescription":"Good Fromtech Keyboard"
+                },
+                {
+                    "id":"21",
+                    "name":"ZEBRONICS",
+                    "image": "img/zk.jpg",
+                    "rating": "3.5",
+                    "price": "450",
+                    "subdescription":"Good Zebronics Keyboard"
+                }
+            ]
+        },
+        {
+            "id":"3",
+            "name":"Mouse",
+            "description":"Good Product 3",
+            "image": "img/mouse.jpg",
+            "subproduct":[
+                {
+                    "id":"30",
+                    "name":"FRONTECH",
+                    "image": "img/fm.jpg",
+                    "rating": "3",
+                    "price": "200",
+                    "subdescription":"Good Fromtech Mouse"
+                },
+                {
+                    "id":"31",
+                    "name":"ZEBRONICS",
+                    "image": "img/zm.jpg",
+                    "rating": "4",
+                    "price": "250",
+                    "subdescription":"Good Zebronics Mouse"
+                }
+            ]
+        }
+    ]
+}

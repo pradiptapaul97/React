@@ -167,7 +167,8 @@ export default function PersistentDrawerLeft() {
   const lout = () =>
   {
       dispatch(logout());
-      history.push('/');
+      window.location.href="/";
+      // history.push('/');
   }
 
   const [anchorEl, setAnchorEl] = React.useState(null);

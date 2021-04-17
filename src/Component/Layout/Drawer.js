@@ -8,7 +8,7 @@ import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {useSelector} from 'react-redux'
 import {Link} from 'react-router-dom'
-import {useHistory} from 'react-router-dom'
+//import {useHistory} from 'react-router-dom'
 import {useDispatch} from 'react-redux'
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -150,7 +150,6 @@ export default function PersistentDrawerLeft() {
 
   const isAuthenticated=sessionStorage.getItem('token');
   const dispatch = useDispatch();
-  const history = useHistory();
   const cart = useSelector(state => state.cartData);
 
   var cartItem = 0;

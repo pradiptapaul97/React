@@ -1,7 +1,7 @@
 import React from 'react';
-import Drawer from '../Component/Layout/Drawer'
-import Footer from '../Component/Layout/Footer'
-import Followus from '../Component/Layout/Followus'
+import Drawer from '../../Component/Layout/Drawer'
+import Footer from '../../Component/Layout/Footer'
+import Followus from '../../Component/Layout/Followus'
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { makeStyles } from '@material-ui/core/styles';
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   papers :{
     padding:20,
     width: "40%",
-    height: 480,
+    height: 520,
     borderRadius: 35,
     textAlign:"center",
     margin: "30px auto",
@@ -62,9 +62,9 @@ export default function Errors()
       <CssBaseline />
       <main>
         <div className={classes.heroContent}>
-            <h3 style={{fontWeight: "bold", fontFamily: "fangsong"}}>404 Not Found</h3>
+            <h3 style={{fontWeight: "bold", fontFamily: "fangsong"}}>My Profile</h3>
               
-            <h5 style={{color: "#f53f85"}}><Link className={classes.link} to="">Home | </Link>404 Not Found</h5>
+            <h5 style={{color: "#f53f85"}}><Link className={classes.link} to="">Home | </Link>Profile</h5>
         </div>
         </main>
     </Container>
@@ -73,9 +73,9 @@ export default function Errors()
     <div style={{backgroundColor:"white"}}>
     <Container className={classes.cardGrid}>
       <Paper elevation={10} className={classes.papers}>
-      <img className={classes.img} alt="about" src="slier/error.png"/>
-      <h2 style={{paddingTop:20}}>Page Not Found</h2>
-      <p>The page you are looking for might have been removed had its name changed or is temporarily unavailable.</p>
+      <img className={classes.img} alt="about" src="slier/profile.jpg"/>
+      <h2 style={{paddingTop:20}}>{sessionStorage.getItem("name")}</h2>
+      <p>{sessionStorage.getItem("email")}</p>
       <Link to="/" className={classes.link}><Button variant="contained" color="secondary">
           Go To Home
       </Button>

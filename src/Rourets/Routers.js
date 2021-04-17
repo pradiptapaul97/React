@@ -21,6 +21,9 @@ import UnProtectedRoute from '../API/UnProtectedRoute'
 import Customer from '../Default/Customer/Customer'
 import Error from '../Extra/Error'
 import { ToastContainer } from 'react-toastify';
+import Profile from '../Protect/User/Profile'
+import Account from '../Protect/User/Account'
+import Orders from '../Protect/User/Order/Orders'
 
 const Routers = () => 
 {
@@ -45,6 +48,9 @@ const Routers = () =>
                 <ProtectedRoute path="/paymet" component={Payment} />
                 <ProtectedRoute path="/review" component={Review} />
                 <ProtectedRoute path="/orderdone" component={OrderDone} />
+                <ProtectedRoute path="/profile" component={Profile} />
+                <ProtectedRoute path="/account" component={Account} />
+                <ProtectedRoute path="/orders" component={Orders} />
 
                 <UnProtectedRoute exact path="/login" component={Login}></UnProtectedRoute>
                 <UnProtectedRoute exact path="/register" component={Register}></UnProtectedRoute>

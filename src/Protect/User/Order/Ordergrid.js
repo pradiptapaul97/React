@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import {useHistory} from 'react-router-dom'
+import Divider from '@material-ui/core/Divider';
 
 import { makeStyles} from '@material-ui/core/styles';
 
@@ -68,7 +69,8 @@ export default function Pgrid(props) {
 
   const detail = () =>
   {
-      const value = props.data[0].id;
+      const value = 10;
+
     history.push(`products/${value}`);
   }
   return (
@@ -76,30 +78,34 @@ export default function Pgrid(props) {
   <div className={classes.root}>
   <Paper className={classes.paper}>
     <Grid container spacing={2}>
-      <Grid item xs={12} md={4}>
-        <ButtonBase className={classes.image}>
-          <img className={classes.img} alt="complex" src={props.data[0].image} />
-        </ButtonBase>
-      </Grid>
+      {props.data.orders.map((e)=>(
+        <>
+         <Grid item xs={12} md={4}>
+          <ButtonBase className={classes.image}>
+            <img className={classes.img} alt="complex" src={e.image} />
+          </ButtonBase>
+        </Grid>
+     
+      
       <Grid item xs={12} md={4} >
 
 
       <Typography gutterBottom variant="subtitle1" className={classes.bold}>
-                {props.data[0].category}
+                {e.category}
                 </Typography>
 
                 <Typography style={{padding:"10px 0px"}}>
-                <span className={classes.bold}>Details : </span>{props.data[0].title}
+                <span className={classes.bold}>Details : </span>{e.title}
                 </Typography>
 
-                <Typography variant="subtitle1" className={classes.bold} style={{color:"#f53f85"}}>Unit Price : <span style={{textDecoration: "line-through",color: "#999"}}>${props.data[0].price+100}</span>  ${props.data[0].price}</Typography>
+                <Typography variant="subtitle1" className={classes.bold} style={{color:"#f53f85"}}>Unit Price : <span style={{textDecoration: "line-through",color: "#999"}}>${e.price+100}</span>  ${e.price}</Typography>
       
                 <Typography style={{padding:"10px 0px"}}>
-                <span className={classes.bold}>Quantity : </span>{props.data[0].quantity}
+                <span className={classes.bold}>Quantity : </span>{e.quantity}
                 </Typography>
 
                 <Typography variant="body2" gutterBottom>
-                Products Type : <span className={classes.bold}>{props.data[0].category}</span>
+                Products Type : <span className={classes.bold}>{e.category}</span>
                 </Typography>
 
                 <Typography variant="body2" gutterBottom>
@@ -117,40 +123,41 @@ export default function Pgrid(props) {
                 </Button>
                 </Typography>
 
-
       </Grid>
 
-    <Grid item xs={12} md={4} >
+      <Grid item xs={12} md={4} >
 
 
 <Typography gutterBottom variant="subtitle1" className={classes.bold}>
-          {props.data[2].fname} {props.data[2].lname}
+          {props.data.address.fname} {props.data.address.lname}
           </Typography>
 
           <Typography style={{padding:"10px 0px"}}>
-          <span className={classes.bold}>Address : </span>{props.data[2].address1} {props.data[2].address2}
+          <span className={classes.bold}>Address : </span>{props.data.address.address1} {props.data.address.address2}
           </Typography>
 
-          <Typography variant="subtitle1" className={classes.bold} style={{color:"#f53f85"}}>Pin :  {props.data[2].pin}</Typography>
+          <Typography variant="subtitle1" className={classes.bold} style={{color:"#f53f85"}}>Pin :  {props.data.address.pin}</Typography>
 
           <Typography style={{padding:"10px 0px"}}>
-          <span className={classes.bold}>City : </span>{props.data[2].city}
+          <span className={classes.bold}>City : </span>{props.data.address.city}
           </Typography>
 
           <Typography style={{padding:"10px 0px"}}>
-          <span className={classes.bold}>Country : </span>{props.data[2].country}
+          <span className={classes.bold}>Country : </span>{props.data.address.country}
           </Typography>
 
           <Typography variant="body2" gutterBottom>
-          <span className={classes.bold}>State:</span> {props.data[2].state}
+          <span className={classes.bold}>State:</span> {props.data.address.state}
           </Typography>
 
           <Typography variant="body2" gutterBottom >
-          <span className={classes.bold} >Contact:</span> {props.data[2].number}
+          <span className={classes.bold} >Contact:</span> {props.data.address.number}
           </Typography>
 
-
+          
 </Grid>
+    </>
+      ))}
 </Grid>
     </Paper>
     </div>

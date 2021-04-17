@@ -114,11 +114,15 @@ const DeliveryOption = () =>
 
     const placeorder = () =>
     {
-        var orders = null;
-        orders = cvalue
-        orders.push(pvalue)
-        orders.push(avalue)
-        dispatch(doneOrder(orders))
+        // var orders = null;
+        // orders = {...cvalue}
+        // var uniq = null;
+        // uniq = {...pvalue,...avalue}
+
+        // console.log(uniq);
+        // console.log(orders);
+
+        dispatch(doneOrder(cvalue,avalue,pvalue))
         dispatch(clearCart())
         history.push("/orderdone")
     }

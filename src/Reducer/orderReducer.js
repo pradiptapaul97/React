@@ -13,9 +13,12 @@ const orderReducer = (state=initialState,action) =>
                 ...state,
             }
         case `${orderConstant.ORDER_ADD}_SUCCESS`:
-            const val = action.payload.data;
+            const address = action.payload.address;
+            const product = action.payload.product;
+            const payment = action.payload.payment;
             const pval = state.ordersData;
-            pval.push(val)
+            pval.push({orders:product,address:address,paymen:payment})
+
             return state = {
                 ...state,
                 ordersData:pval

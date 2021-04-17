@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "30px auto",
     [theme.breakpoints.down('sm')]: {
         width: "90%",
-        height: 370,
+        height: 500,
       },
 },
   link:{

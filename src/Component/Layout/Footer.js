@@ -76,7 +76,7 @@ const footers = [
     title: 'Customer Support',
     description: ['My Account', 'Shop Now','Order Tracking','Help & Support'],
     icon:[],
-    link:['','/products','','/contact']
+    link:['/account','/products','','/contact']
   },
   {
     title: 'Newsletter',

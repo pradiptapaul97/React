@@ -8,7 +8,7 @@ import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {useSelector} from 'react-redux'
 import {Link} from 'react-router-dom'
-//import {useHistory} from 'react-router-dom'
+import {useHistory} from 'react-router-dom'
 import {useDispatch} from 'react-redux'
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -138,6 +138,7 @@ const useStyles = makeStyles((theme) => ({
 export default function PersistentDrawerLeft() {
   const classes = useStyles();
   const theme = useTheme();
+  const history = useHistory();
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
@@ -169,6 +170,13 @@ export default function PersistentDrawerLeft() {
       window.location.href="/";
       // history.push('/');
   }
+
+  const clickpro = () => {history.push("/profile");}
+  const clickacc = () => {history.push("/account");}
+
+  const clicklin = () => {history.push("/login");}
+  const clickreg = () => {history.push("/register");}
+
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const openi = Boolean(anchorEl);
@@ -296,15 +304,15 @@ export default function PersistentDrawerLeft() {
                     onClose={handleClose}
                 >
                     {(isAuthenticated !== null) ? (<>
-                        <MenuItem onClick={handleClose}>Profile</MenuItem>
-                        <MenuItem onClick={handleClose}>My account</MenuItem>
+                        <MenuItem onClick={clickpro}>Profile</MenuItem>
+                        <MenuItem onClick={clickacc}>My account</MenuItem>
                         <MenuItem onClick={lout}>Logout</MenuItem>
                          </>) : (<>
-                        <MenuItem >
-                            <Link className={classes.linki} to="/register">Register</Link>
+                        <MenuItem onClick={clickreg} >
+                            Register
                         </MenuItem>
-                        <MenuItem >
-                            <Link className={classes.linki} to="/login">Login</Link>
+                        <MenuItem onClick={clicklin} >
+                            Login
                         </MenuItem>
                         </>
                     )}
